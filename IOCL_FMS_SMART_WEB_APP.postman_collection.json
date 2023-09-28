@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "b6c7d2e4-6b19-4d2e-96b2-11d01fae65d8",
+		"name": "IOCL_FMS_SMART_WEB_APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29508073",
+		"_collection_link": "https://speeding-resonance-716623.postman.co/workspace/New-Team-Workspace~9ea0e4e8-0366-4fb3-99bd-b719838fea4a/collection/29508073-b6c7d2e4-6b19-4d2e-96b2-11d01fae65d8?action=share&source=collection_link&creator=29508073"
+	},
+	"item": [
+		{
+			"name": "FMS_SMART_User_Authentication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://ioclfmssmart.tmsitrimble.in",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"applicationId\":1,\r\n\"userName\":\"11038331\",\r\n\"password\":\"Nr@747900\",\r\n\"serverName\":\"IOCL\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/login/post/json/userAuthentication",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"login",
+						"post",
+						"json",
+						"userAuthentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menu-Mapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":19139}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/admin/post/json/getUserMenuMapping",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"admin",
+						"post",
+						"json",
+						"getUserMenuMapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Vehicles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":19139}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/masters/post/json/getUserVehicles",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"masters",
+						"post",
+						"json",
+						"getUserVehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Drivers-Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":19139}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/masters/post/json/getDriverDetails",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"masters",
+						"post",
+						"json",
+						"getDriverDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status-Dashboard Count",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":19139}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/dashboard/post/json/getTransporterStatusDashbaordCounts",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"dashboard",
+						"post",
+						"json",
+						"getTransporterStatusDashbaordCounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transporter-sfty-voilation-count",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":19139,\"fromDate\":\"2023-09-19\",\"toDate\":\"2023-09-19\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/dashboard/post/json/getTransporterSafetyViolationDashbaordCounts",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"dashboard",
+						"post",
+						"json",
+						"getTransporterSafetyViolationDashbaordCounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SafetySummary-REPORT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":19139,\"vehicleGroupId\":[],\"vehicleId\":[10015],\"fDate\":\"2023-09-18 00:00:00\",\"tDate\":\"2023-09-19 23:59:59\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/report/post/json/getSafetySummaryReport",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"report",
+						"post",
+						"json",
+						"getSafetySummaryReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tracking-REPORT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"vehicleId\":[10015],\"fDate\":\"2023-09-01 00:00:00\",\"tDate\":\"2023-09-20 15:25:03\",\"uId\":19139}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/report/post/json/getTrackingReport",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"report",
+						"post",
+						"json",
+						"getTrackingReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpeedBasesReport-REPORT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":19139,\"vehicleId\":[10015,10052,10080,10155,10317,10334,10480,17531,17591,17598,17601,17604,17607,17641,17644,17670,17675,17676,17684,17702,17703,17714,17734,17740,17745,17747,17759],\"fDate\":\"2023-09-10 00:00:00\",\"vehicleGroupId\":[],\"tDate\":\"2023-09-21 11:28:51\",\"speedLimit\":66}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/report/post/json/getSpeedBasedOverspeedReport",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"report",
+						"post",
+						"json",
+						"getSpeedBasedOverspeedReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DayWiseDistance-REPORT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":19139,\"vehicleId\":[-1],\"vehicleGroupId\":[],\"fDate\":\"2023-09-10 00:00:00\",\"tDate\":\"2023-09-21 00:00:00\",\"fTime\":\"00:00:00\",\"tTime\":\"23:59:59\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/report/post/json/getDaywiseDistanceReport",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"report",
+						"post",
+						"json",
+						"getDaywiseDistanceReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exception-REPORT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":19139,\"vehicleId\":[-1],\"fDate\":\"2023-09-13 00:00:00\",\"tDate\":\"2023-09-21 23:59:59\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/report/post/json/getExceptionReport",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"report",
+						"post",
+						"json",
+						"getExceptionReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NightDriveSummaryReport-REPORT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":19139,\"vehicleId\":[-1],\"vehicleGroupId\":[],\"fDate\":\"2023-09-13 00:00:00\",\"tDate\":\"2023-09-21 23:59:59\",\"instance\":0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/report/post/json/getNightDriveSummaryReport",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"report",
+						"post",
+						"json",
+						"getNightDriveSummaryReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeviationSummary-REPORT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"vehicleId\":[-1],\"vehicleGroupId\":[],\"violationType\":[2],\"fDate\":\"2023-09-13 00:00:00\",\"tDate\":\"2023-09-21 23:59:59\",\"uId\":19139}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/report/post/json/getDeviationReport",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"report",
+						"post",
+						"json",
+						"getDeviationReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendFeedback-FB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":19139,\"applicationId\":2,\"userName\":\"Madhav\",\"userEmail\":\"immaddy@gmail.com\",\"userComment\":\"Absolutely a great useful app.\",\"userRating\":5,\"feedbackType\":\"Others\",\"uploadImage\":null,\"imageName\":null}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/FMSSmart/feedback/post/json/saveFeedbackData",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"FMSSmart",
+						"feedback",
+						"post",
+						"json",
+						"saveFeedbackData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
